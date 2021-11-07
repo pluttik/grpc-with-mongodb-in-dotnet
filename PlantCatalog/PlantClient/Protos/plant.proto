@@ -1,0 +1,64 @@
+syntax = "proto3";
+
+option csharp_namespace = "PlantCatalog";
+
+package plant;
+
+// The greeting service definition.
+service PlantCatalog {
+  // Sends a greeting
+  rpc CreatePlant (CreatePlantRequest) returns (CreatePlantReply) {}
+  rpc ReadPlant (ReadPlantRequest) returns (ReadPlantReply) {}
+  rpc UpdatePlant (UpdatePlantRequest) returns (UpdatePlantReply) {}
+  rpc DeletePlant (DeletePlantRequest) returns (DeletePlantReply) {}
+  rpc ListPlant (ListPlantRequest) returns (stream ListPlantReply) {}
+}
+
+message Plant {
+  string id = 1;
+  string common_name = 2;
+  string latin_name = 3;
+  string description = 4;
+}
+
+// The request message containing the user's name.
+message CreatePlantRequest {
+  Plant plant = 1;
+}
+
+// The response message containing the greetings.
+message CreatePlantReply {
+  Plant plant = 1;
+}
+
+message ReadPlantRequest {
+	string id = 1;
+}
+
+message ReadPlantReply {
+	Plant plant = 1;
+}
+
+message UpdatePlantRequest {
+	Plant plant = 1;
+}
+
+message UpdatePlantReply {
+	Plant plant = 2;
+}
+
+message DeletePlantRequest {
+    string id = 1;
+}
+
+message DeletePlantReply {
+	string id = 1;
+}
+
+message ListPlantRequest {
+
+}
+
+message ListPlantReply {
+	Plant plant = 1;
+}

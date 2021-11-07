@@ -1,0 +1,2 @@
+obj\Release\net5.0\Protos/Plant.cs \
+obj\Release\net5.0\Protos/PlantGrpc.cs: Protos/plant.proto

@@ -1,0 +1,2 @@
+obj\Debug\net5.0\Protos/Plant.cs \
+obj\Debug\net5.0\Protos/PlantGrpc.cs: Protos/plant.proto
